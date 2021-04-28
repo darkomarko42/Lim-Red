@@ -3,16 +3,16 @@
  **********/
 
 @define-color button_color @theme_base_color;
-@define-color alt_button_color @button_color;
+@define-color alt_button_color mix(@colorPrimary,white,0.25);
 @define-color widget_color alpha(@theme_fg_color,0.2);
 @define-color panel_bg shade(@colorPrimary,0.9);
 @define-color panel_fg @textColorPrimary;
 
-@define-color colorPrimary mix(@theme_bg_color,black,0.1);
-@define-color textColorPrimary @theme_fg_color;
+@define-color colorPrimary mix(@selected_bg_color,black,0.2);
+@define-color textColorPrimary white;
 @define-color sidebar_color mix(@theme_bg_color,black,0.05);
 
-@define-color colorPrimaryBackdrop mix(@colorPrimary,@base_color,0.5);
+@define-color colorPrimaryBackdrop mix(@colorPrimary,@base_color,0.3);
 @define-color textColorPrimaryShadow @text_shadow_color;
 
 @define-color theme_fg_color black;
@@ -2922,7 +2922,7 @@ button.flat.launcher image{-gtk-icon-shadow: 0 1px 2px @shadow;}
 
 .budgie-popover.budgie-menu entry.search {font-size: 120%; margin: 6px;}
 
-.budgie-menu .sidebar .frame{background-color: transparent; border-right: 1px solid @transparent_border;}
+.budgie-menu .sidebar .frame{background-color: transparent; border-right: 1px solid @borders;}
 
 .budgie-popover row.activatable {background-color: transparent; background-image: none;}
 

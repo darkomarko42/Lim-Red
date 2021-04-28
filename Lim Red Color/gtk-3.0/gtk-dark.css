@@ -3,22 +3,22 @@
  **********/
 
 @define-color button_color @theme_base_color;
-@define-color alt_button_color @button_color;
+@define-color alt_button_color mix(@colorPrimary,white,0.25);
 @define-color widget_color alpha(@theme_fg_color,0.2);
 @define-color panel_bg shade(@colorPrimary,0.9);
 @define-color panel_fg @textColorPrimary;
 
-@define-color colorPrimary mix(@theme_bg_color,black,0.1);
-@define-color textColorPrimary @theme_fg_color;
-@define-color sidebar_color mix(@theme_bg_color,black,0.05);
+@define-color colorPrimary mix(@selected_bg_color,black,0.2);
+@define-color textColorPrimary white;
+@define-color sidebar_color mix(@theme_bg_color,black,0.1);
 
-@define-color colorPrimaryBackdrop mix(@colorPrimary,@base_color,0.5);
+@define-color colorPrimaryBackdrop mix(@colorPrimary,@base_color,0.3);
 @define-color textColorPrimaryShadow @text_shadow_color;
 
-@define-color theme_fg_color black;
+@define-color theme_fg_color white;
 @define-color theme_text_color @theme_fg_color;
-@define-color theme_bg_color #e6e6e6;
-@define-color theme_base_color #fff;
+@define-color theme_bg_color #333;
+@define-color theme_base_color mix(@theme_bg_color,white,0.15);
 
 @define-color theme_unfocused_fg_color @theme_fg_color;
 @define-color theme_unfocused_text_color @theme_fg_color;
@@ -48,7 +48,7 @@
 @define-color unfocused_borders @borders;
 @define-color border_color shade(@bg_color,0.75);
 
-@define-color transparent_border alpha(black,0.25);
+@define-color transparent_border alpha(black,0.3);
 
 @define-color selected_bg_color #E04949;
 @define-color selected_fg_color white;
@@ -353,7 +353,7 @@ scale trough,
 scale highlight,
 button.suggested-action,
 button.destructive-action
-{background-clip: border-box;}
+{background-clip: padding-box;}
 
 * {
 	background-origin: border-box;
@@ -2922,7 +2922,7 @@ button.flat.launcher image{-gtk-icon-shadow: 0 1px 2px @shadow;}
 
 .budgie-popover.budgie-menu entry.search {font-size: 120%; margin: 6px;}
 
-.budgie-menu .sidebar .frame{background-color: transparent; border-right: 1px solid @transparent_border;}
+.budgie-menu .sidebar .frame{background-color: transparent; border-right: 1px solid @borders;}
 
 .budgie-popover row.activatable {background-color: transparent; background-image: none;}
 
